@@ -4,6 +4,36 @@
   <title>Home | IT Dept</title>
   <%= render 'layouts/links' %>
   <%= render 'layouts/styles' %>
+
+  <style>
+
+    .tabs .tab a:hover, .tabs .tab a.active
+    {
+      color: #673BB7;
+    }
+
+    .tabs .tab a:hover, .tabs .tab a
+    {
+      color: #673BB780;
+    }
+
+    .tabs .indicator
+    {
+      background-color: #673BB7;
+    }
+
+    .tabs .tab a:focus, .tabs .tab a:focus.active
+    {
+      background-color: transparent;
+    }
+
+    strong
+    {
+      color: #673BB7;
+    }
+
+  </style>
+
 </head>
 <body>
 <main>
@@ -11,30 +41,66 @@
   <div class="container">
     <div class="row">
       <%= render 'home/carousel' %>
+
       <!--Latest @ IT-->
+      <%= render 'home/events' %>
+
+    </div>
+    <div class="row">
+      <!--NOTICE -->
       <!--Card Begin-->
-      <div class="col s12 m3" style="height: 400px; margin-top: -5px;">
+      <div class="col s12 m4" style="height: 400px; margin-top: -5px;">
         <div class="card" style="height: 100%; border-radius: 15px;">
           <div class="card-content">
-            <p class="center flow-text" style="color: #673BB7;"> Latest @ IT</p>
+            <p class="center flow-text" style="color: #673BB7;"> Notice</p>
             <hr>
-            <% @events.last(3).each do |events| %>
+            <% @notices.last(6).reverse.each do |notices| %>
                 <!--Date-->
-                <strong style="font-size: 80%; color:#673BB7;"><%= events.date %></strong>:
-                <!--Event Name-->
-                <a href="/events/<%= events.id %>" style="text-decoration: none; font-size: 80%; color: #333;"><%= events.title %></a>
+                <strong style="font-size: 80%; color:#673BB7;"><%= notices.date %></strong>:
+                <!--Notice Name-->
+                <a href="/notices/<%= notices.id %>" style="text-decoration: none; font-size: 80%; color: #333;"><%= notices.title %></a>
                 <hr>
             <% end %>
 
             <!--View All-->
             <p class="center" style="margin-top: 5px;">
-              <a href="/events" style="color: #673BB7;">View All</a>
+              <a href="/notices" style="color: #673BB7;">View All</a>
             </p>
           </div>
         </div>
       </div>
       <!--Card End-->
 
+      <div class="col s12 m8">
+        <ul class="tabs center">
+          <li class="tab col s6"><a class="active" href="#about">About the department</a></li>
+          <li class="tab col s6"><a href="#message">Message from the HoD</a></li>
+        </ul>
+      </div>
+      <div id="about" class="col s12 m8" style="padding: 1rem 2rem 1rem 2rem; text-align: justify;">
+        <br>
+        <strong>Vision</strong>
+        <br>
+        To establish the department as a major source of manpower for the IT sector. <br><br>
+        <strong>Mission</strong>
+        <br>
+
+        To produce engineering graduates with sound technical knowledge in Information Technology, good communication skills, ability to excel in professional career and possess high moral values. <br><br>
+
+        <strong>Salient features of Department</strong>
+        <br>
+
+        1. The department has been accredited twice by National board of Accreditation, AICTE. <br>
+        2. Department has an excellent infrastructure. Laboratories are well equipped with computers of latest configuration and Internet facility. Latest software, wireless access point, LCD projectors and a separate router are used in the laboratories and for teaching purpose. <br>
+        3. Students are motivated and encouraged to appear in GATE, CAT, GRE and other competitive examinations through guest lectures and seminars by eminent personalities in this field. This has resulted in increased number of students appearing and clearing these prestigious examinations.<br>
+        4. The department also coordinates Semicolon Tech Club of RCOEM, under which various national and college level technical and co-curricular activities are organized for the benefit of students
+
+        <br><br>
+        <strong>Career Prospects</strong>
+        <br>
+        IT Graduates can expect professional career opportunities in IT and other allied industries in the areas such as system analysis, design, development, support,mobile and distributed application development, web/ecommerce development, database administration, computer hardware, networking, education and training.
+      </div>
+      <div id="message" class="col s12 m8">Test 2</div>
     </div>
   </div>
 </main>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notices | IT Dept</title>
+  <%= render 'layouts/links' %>
+  <%= render 'layouts/styles' %>
+</head>
+<body>
+<%= render 'layouts/navbar' %>
+<main>
+  <div class="container">
+    <p class="flow-text center">Notices</p>
+    <div class="row">
+      <% @notices.each do |notice| %>
+          <div class="col offset-m1 m10 s12">
+            <p onclick="location.href='/notices/<%= notice.id %>'" style="cursor: pointer;"><strong><%= notice.date %></strong>: <a href="notices/<%= notice.id %>"><%= notice.title %></a></p>
+            <hr>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</main>
+<%= render 'layouts/footer' %>
+<%= render 'layouts/scripts' %>
+</body>
+</html>

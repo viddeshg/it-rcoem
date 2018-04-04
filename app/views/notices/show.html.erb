@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @notice.title %></title>
+  <%= render 'layouts/links' %>
+  <%= render 'layouts/styles' %>
+</head>
+<body>
+<%= render 'layouts/navbar' %>
+<main>
+  <div class="container">
+
+
+    <div class="row">
+      <div class="col s12 m9">
+        <div class="card ">
+          <div class="card-content">
+            <div>
+              <p style="font-size: 1.5rem; color: #673BB7;"><strong><%= @notice.date %></strong>: <a style="color: #333;" href="events/<%= @notice.id %>"><%= @notice.title %></a></p>
+            </div>
+            <hr>
+            <div>
+              <%= @notice.description %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Card Begin-->
+      <div class="col s12 m3" style="height: 400px; margin-top: -5px;">
+        <div class="card" style="height: 100%; border-radius: 15px;">
+          <div class="card-content">
+            <p class="center flow-text" style="color: #673BB7;"> Latest @ IT</p>
+            <hr>
+
+
+            <% @notices.last(3).each do |notices| %>
+
+                <!--Date-->
+                <strong style="font-size: 80%; color:#673BB7;"><%= notices.date %></strong>:
+                <!--Event Name-->
+                <a href="/notices/<%= notices.id %>" style="text-decoration: none; font-size: 80%; color: #333;"><%= notices.title %></a>
+                <hr>
+            <% end %>
+
+            <!--View All-->
+            <p class="center" style="margin-top: 5px;">
+              <a href="/notices" style="color: #673BB7;">View All</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--Card End-->
+    </div>
+
+
+  </div>
+</main>
+<%= render 'layouts/footer' %>
+<%= render 'layouts/scripts' %>
+</body>
+</html>
