@@ -1,5 +1,31 @@
-<h1>New Event</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Faculty | IT Dept</title>
+  <%= render 'layouts/links' %>
+  <%= render 'layouts/styles' %>
 
-<%= render 'form', event: @event %>
+  <style>
+    i input
+    {
+      color: white !important;
+    }
+  </style>
+</head>
+<body>
+<%= render 'layouts/navbar' %>
+<main>
+  <div class="container">
+    <br><br>
+    <div class="row">
+      <div class="col s12 m6 offset-m3">
+        <%= render 'events/formNew.html.erb' %>
+      </div>
+    </div>
+  </div>
+</main>
+<%= render 'layouts/footer' %>
+<%= render 'layouts/scripts' %>
 
-<%= link_to 'Back', events_path %>
+</body>
+</html>

@@ -6,44 +6,33 @@
   <%= render 'layouts/styles' %>
 </head>
 <body>
-<%= render 'layouts/navbar' %>
 <main>
+  <%= render 'layouts/navbar' %>
   <div class="container">
     <div class="row">
       <%= render 'home/carousel' %>
       <!--Latest @ IT-->
       <!--Card Begin-->
       <div class="col s12 m3" style="height: 400px; margin-top: -5px;">
-        <div class="card" style="height: 100%; border-radius: 15px;" onclick="location.href=''" style="cursor: pointer;">
+        <div class="card" style="height: 100%; border-radius: 15px;">
           <div class="card-content">
             <p class="center flow-text" style="color: #673BB7;"> Latest @ IT</p>
             <hr>
 
-            <!--EVENT-->
-            <!--Date-->
-            <strong style="font-size: 80%; color:#673BB7;">Apr 2018</strong>:
-            <!--Event Name-->
-            <a href="" style="text-decoration: none; font-size: 80%; color: #333;">Dr. Mitesh Khapra has been selected as a recipient of Google Faculty Awards 2017.</a>
-            <hr>
 
-            <!--EVENT-->
-            <!--Date-->
-            <strong style="font-size: 80%; color:#673BB7;">Apr 2018</strong>:
-            <!--Event Name-->
-            <a href="" style="text-decoration: none; font-size: 80%; color: #333;">Dr. Mitesh Khapra has been selected as a recipient of Google Faculty Awards 2017.</a>
-            <hr>
+            <% for i in 1..3 %>
+                <!--Date-->
+                <strong style="font-size: 80%; color:#673BB7;"><%= @events.date %></strong>:
+                <!--Event Name-->
+                <a href="" style="text-decoration: none; font-size: 80%; color: #333;"><%= @events.title %></a>
+                <hr>
+            <% end %>
 
-            <!--EVENT-->
-            <!--Date-->
-            <strong style="font-size: 80%; color:#673BB7;">Apr 2018</strong>:
-            <!--Event Name-->
-            <a href="" style="text-decoration: none; font-size: 80%; color: #333;">Dr. Mitesh Khapra has been selected as a recipient of Google Faculty Awards 2017.</a>
-            <hr>
+            <!--View All-->
+            <p class="center" style="margin-top: 5px;">
+              <a href="/events" style="color: #673BB7;">View All</a>
+            </p>
           </div>
-          <!--View All-->
-          <p class="center" style="margin-top: 5px;">
-            <a href="" style="color: #673BB7;">View All</a>
-          </p>
         </div>
       </div>
       <!--Card End-->

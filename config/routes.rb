@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :events
   root 'home#home'
+
+
   get '/faculty', to: 'faculty#faculty'
   get '/faculty/d_adane', to: 'faculty#d_adane'
   get '/faculty/p_adane', to: 'faculty#p_adane'
