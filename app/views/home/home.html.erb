@@ -18,13 +18,11 @@
           <div class="card-content">
             <p class="center flow-text" style="color: #673BB7;"> Latest @ IT</p>
             <hr>
-
-
-            <% for i in 1..3 %>
+            <% @events.last(3).each do |events| %>
                 <!--Date-->
-                <strong style="font-size: 80%; color:#673BB7;"><%= @events.date %></strong>:
+                <strong style="font-size: 80%; color:#673BB7;"><%= events.date %></strong>:
                 <!--Event Name-->
-                <a href="" style="text-decoration: none; font-size: 80%; color: #333;"><%= @events.title %></a>
+                <a href="/events/<%= events.id %>" style="text-decoration: none; font-size: 80%; color: #333;"><%= events.title %></a>
                 <hr>
             <% end %>
 

@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
-  def self.home
+  def home
     @events = Event.all
+
   end
 end
