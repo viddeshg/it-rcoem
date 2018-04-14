@@ -13,7 +13,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.save
     flash[:notice] = "Event was successfully created."
-    redirect_to '/events/new'
+    redirect_to '/admin/events'
   end
 
   def show

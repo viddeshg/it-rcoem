@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Faculty</title>
+  <%= render 'layouts/links' %>
+  <%= render 'layouts/styles' %>
+
+  <style>
+    .btn-large:hover
+    {
+      background-color: #fff;
+      color: #673BB7;
+      /*border: 1px solid #673BB7;*/
+    }
+
+    .btn-large
+    {
+      background-color: #673BB7;
+      color: #fff;
+    }
+  </style>
+
+</head>
+<body>
+<%= render 'layouts/navbar' %>
+<main>
+  <div class="container">
+    <br><br>
+    <div class="row">
+      <div class="col m2 s6">
+        <a class="waves-effect waves-light btn-large" href="/admin/events"><i class="fas fa-star"></i> <span style="letter-spacing: 1px;">EVENTS</span></a>
+      </div>
+      <div class="col m2 s6">
+        <a class="waves-effect waves-light btn-large" href="/admin/notices"><i class="fas fa-bell"></i> <span style="letter-spacing: 1px;"> NOTICES</span></a>
+      </div>
+    </div>
+
+  </div>
+</main>
+<%= render 'layouts/footer' %>
+<%= render 'layouts/scripts' %>
+<script>
+    $(document).ready(function() {
+        $('input#event_name').characterCounter();
+    });
+</script>
+</body>
+</html>

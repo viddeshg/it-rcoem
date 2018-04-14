@@ -9,7 +9,7 @@ class NoticesController < ApplicationController
     @notice = Notice.new(notice_params)
     @notice.save
     flash[:notice] = "Notice was successfully created."
-    redirect_to '/notices/new'
+    redirect_to '/admin/notices'
   end
 
   def show

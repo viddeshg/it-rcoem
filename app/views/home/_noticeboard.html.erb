@@ -1,0 +1,22 @@
+<!--Card Begin-->
+<div class="col s12 m4" style="height: 400px; margin-top: -5px;">
+  <div class="card" style="height: 100%; border-radius: 15px;">
+    <div class="card-content">
+      <p class="center flow-text" style="color: #673BB7;"> Notice Board</p>
+      <hr>
+      <% @notices.last(6).reverse.each do |notices| %>
+          <!--Date-->
+          <strong style="font-size: 80%; color:#673BB7;"><%= notices.date %></strong>:
+          <!--Notice Name-->
+          <a href="/notices/<%= notices.id %>" style="text-decoration: none; font-size: 80%; color: #333;"><%= notices.title %></a>
+          <hr>
+      <% end %>
+
+      <!--View All-->
+      <p class="center" style="margin-top: 5px;">
+        <a href="/notices" style="color: #673BB7;">View All</a>
+      </p>
+    </div>
+  </div>
+</div>
+<!--Card End-->

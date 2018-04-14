@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin | Notices</title>
+  <%= render 'layouts/links' %>
+  <%= render 'layouts/styles' %>
+
+  <style>
+    i input
+    {
+      color: white !important;
+    }
+  </style>
+</head>
+<body>
+<%= render 'layouts/navbar' %>
+<main>
+  <div class="container">
+    <br><br>
+    <div class="row">
+      <div class="col s12 m10 offset-m1">
+        <%= render 'notices/formNew' %>
+      </div>
+      <div class="col s12 m10 offset-m1">
+        <table class="s12 m12 striped">
+          <thead style="color:#673BB7;">
+          <tr>
+            <th>S.No.</th>
+            <th>Date</th>
+            <th>Notice Title</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @notices.each do |notice| %>
+              <tr>
+                <td><%= @flag = @flag + 1 %></td>
+                <td><%= notice.date %></td>
+                <td><a style="color:#333;" href="/notices/<%= notice.id %>"><%= notice.title %></a></td>
+                <td> <a style="color:#209CEE;" href=""><i class="far fa-edit"></i> Edit</a> | <a href="" style="color:#FF3860;"><i class="far fa-trash-alt"></i> Delete</a></td>
+              </tr>
+
+          <% end %>
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>
+  </div>
+</main>
+<%= render 'layouts/footer' %>
+<%= render 'layouts/scripts' %>
+<script>
+    $(document).ready(function() {
+        $('input#notice_name').characterCounter();
+    });
+</script>
+</body>
+</html>

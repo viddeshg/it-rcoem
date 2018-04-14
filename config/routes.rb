@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   resources :notices
   root 'home#home'
 
+  get '/admin', to: 'admin#admin'
+  get '/admin/events', to: 'admin#events'
+  get '/admin/notices', to: 'admin#notices'
+
   get '/faculty', to: 'faculty#faculty'
   get '/faculty/d_adane', to: 'faculty#d_adane'
   get '/faculty/p_adane', to: 'faculty#p_adane'

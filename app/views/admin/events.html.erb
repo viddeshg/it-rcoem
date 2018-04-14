@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin | Events</title>
+  <%= render 'layouts/links' %>
+  <%= render 'layouts/styles' %>
+
+  <style>
+    i input
+    {
+      color: white !important;
+    }
+  </style>
+</head>
+<body>
+<%= render 'layouts/navbar' %>
+<main>
+  <div class="container">
+    <br><br>
+    <div class="row">
+      <div class="col s12 m6 offset-m3">
+        <%= render 'events/formNew.html.erb' %>
+      </div>
+    </div>
+  </div>
+</main>
+<%= render 'layouts/footer' %>
+<%= render 'layouts/scripts' %>
+<script>
+    $(document).ready(function() {
+        $('input#event_name').characterCounter();
+    });
+</script>
+</body>
+</html>
