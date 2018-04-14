@@ -6,9 +6,9 @@
   <%= render 'layouts/styles' %>
 
   <style>
-    i input
+    tbody td
     {
-      color: white !important;
+      padding: 0.4rem;
     }
   </style>
 </head>
@@ -16,7 +16,22 @@
 <%= render 'layouts/navbar' %>
 <main>
   <div class="container">
-    <br><br>
+    <p class="center flow-text" style="letter-spacing: 1px; color: #673BB7;"><strong>ADMIN PANEL</strong></p>
+
+    <div class="row">
+      <div class="col s12 m10 offset-m1" style="padding:0;">
+        <div class="col m2 s6">
+          <a class="center waves-effect waves-light custom-btn" href="/admin"><i class="fas fa-home"></i> HOME</a>
+        </div>
+        <div class="col m2 s6">
+          <a class="center waves-effect waves-light custom-btn" href="/admin/events" style="margin-bottom: 5px;"><i class="fas fa-star"></i> EVENTS</a>
+        </div>
+        <div class="col m2 s6">
+          <a class="waves-effect center waves-light custom-active" href="/admin/notices"><i class="fas fa-bell"></i> NOTICES</a>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col s12 m10 offset-m1">
         <%= render 'notices/formNew' %>
@@ -37,7 +52,7 @@
                 <td><%= @flag = @flag + 1 %></td>
                 <td><%= notice.date %></td>
                 <td><a style="color:#333;" href="/notices/<%= notice.id %>"><%= notice.title %></a></td>
-                <td> <a style="color:#209CEE;" href="/admin/notices/<%= notice.id %>/edit_notice"><i class="far fa-edit"></i> Edit</a> | <a href="/admin/notices/<%= notice.id %>/destroy_notice" onclick="return confirm('Are you sure?')" style="color:#FF3860;"><i class="far fa-trash-alt"></i> Delete</a></td>
+                <td> <a style="color:#209CEE;" href="/admin/notices/<%= notice.id %>/edit_notice"><i class="far fa-edit"></i> Edit</a> <br> <a href="/admin/notices/<%= notice.id %>/destroy_notice" onclick="return confirm('Are you sure?')" style="color:#FF3860;"><i class="far fa-trash-alt"></i> Delete</a></td>
               </tr>
           <% end %>
           </tbody>
@@ -51,6 +66,13 @@
 <script>
     $(document).ready(function() {
         $('input#notice_name').characterCounter();
+
+        if ($.trim($("#notice_name, #notice_desc, #calender").val()) === "") {
+            $('form').submit(function(e) {
+                e.preventDefault();
+                alert('Input fields cannot be left blank.');
+            })
+        }
     });
 </script>
 </body>

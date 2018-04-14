@@ -25,14 +25,21 @@
 <%= render 'layouts/navbar' %>
 <main>
   <div class="container">
-    <br><br>
+    <p class="center flow-text" style="letter-spacing: 1px; color: #673BB7;"><strong>ADMIN PANEL</strong></p>
+
     <div class="row">
-      <div class="col m2 s6">
-        <a class="waves-effect waves-light btn-large" href="/admin/events"><i class="fas fa-star"></i> <span style="letter-spacing: 1px;">EVENTS</span></a>
+      <div class="col s12 m10 offset-m1" style="padding:0;">
+        <div class="col m2 s6">
+          <a class="center waves-effect waves-light custom-active" href="/admin"><i class="fas fa-home"></i> HOME</a>
+        </div>
+        <div class="col m2 s6">
+          <a class="center waves-effect waves-light custom-btn" href="/admin/events" style="margin-bottom: 5px;"><i class="fas fa-star"></i> EVENTS</a>
+        </div>
+        <div class="col m2 s6">
+          <a class="waves-effect center waves-light custom-btn" href="/admin/notices"><i class="fas fa-bell"></i> NOTICES</a>
+        </div>
       </div>
-      <div class="col m2 s6">
-        <a class="waves-effect waves-light btn-large" href="/admin/notices"><i class="fas fa-bell"></i> <span style="letter-spacing: 1px;"> NOTICES</span></a>
-      </div>
+    </div>
     </div>
 
   </div>

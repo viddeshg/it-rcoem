@@ -28,7 +28,6 @@
             <th>S.No.</th>
             <th>Date</th>
             <th>Notice Title</th>
-            <th>Action</th>
           </tr>
           </thead>
           <tbody>
@@ -37,7 +36,6 @@
                 <td><%= @flag = @flag + 1 %></td>
                 <td><%= notice.date %></td>
                 <td><a style="color:#333;" href="/notices/<%= notice.id %>"><%= notice.title %></a></td>
-                <td> <a style="color:#209CEE;" href="/admin/notices/<%= notice.id %>/edit"><i class="far fa-edit"></i> Edit</a> | <a href="" style="color:#FF3860;"><i class="far fa-trash-alt"></i> Delete</a></td>
               </tr>
 
           <% end %>
