@@ -37,7 +37,6 @@ class EventsController < ApplicationController
     @event.destroy
     flash[:notice] = "Event was deleted."
     redirect_to '/admin/events'
-
   end
 
   def event_params

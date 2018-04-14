@@ -1,3 +1,3 @@
-class Admin < EventRecord::Base
+class Admin < ActiveRecord::Base
 
 end
