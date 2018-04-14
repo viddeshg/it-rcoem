@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Admin | Notices</title>
+  <title>Edit | <%= @notice.id %>></title>
   <%= render 'layouts/links' %>
   <%= render 'layouts/styles' %>
 
@@ -12,7 +12,7 @@
     }
   </style>
 </head>
-<body style="overflow-x:hidden">
+<body>
 <%= render 'layouts/navbar' %>
 <main>
   <div class="container">
@@ -37,11 +37,14 @@
                 <td><%= @flag = @flag + 1 %></td>
                 <td><%= notice.date %></td>
                 <td><a style="color:#333;" href="/notices/<%= notice.id %>"><%= notice.title %></a></td>
-                <td> <a style="color:#209CEE;" href="/admin/notices/<%= notice.id %>/edit_notice"><i class="far fa-edit"></i> Edit</a> | <a href="/admin/notices/<%= notice.id %>/destroy_notice" style="color:#FF3860;"><i class="far fa-trash-alt"></i> Delete</a></td>
+                <td> <a style="color:#209CEE;" href="/admin/notices/<%= notice.id %>/edit"><i class="far fa-edit"></i> Edit</a> | <a href="" style="color:#FF3860;"><i class="far fa-trash-alt"></i> Delete</a></td>
               </tr>
+
           <% end %>
           </tbody>
         </table>
+
+
       </div>
     </div>
   </div>

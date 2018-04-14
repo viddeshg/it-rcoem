@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Admin | Notices</title>
+  <title>Edit | <%= @event.id %>></title>
   <%= render 'layouts/links' %>
   <%= render 'layouts/styles' %>
 
@@ -12,14 +12,14 @@
     }
   </style>
 </head>
-<body style="overflow-x:hidden">
+<body>
 <%= render 'layouts/navbar' %>
 <main>
   <div class="container">
     <br><br>
     <div class="row">
       <div class="col s12 m10 offset-m1">
-        <%= render 'notices/formNew' %>
+        <%= render 'events/formNew' %>
       </div>
       <div class="col s12 m10 offset-m1">
         <table class="s12 m12 striped">
@@ -32,16 +32,18 @@
           </tr>
           </thead>
           <tbody>
-          <% @notices.each do |notice| %>
+          <% @events.each do |event| %>
               <tr>
                 <td><%= @flag = @flag + 1 %></td>
-                <td><%= notice.date %></td>
-                <td><a style="color:#333;" href="/notices/<%= notice.id %>"><%= notice.title %></a></td>
-                <td> <a style="color:#209CEE;" href="/admin/notices/<%= notice.id %>/edit_notice"><i class="far fa-edit"></i> Edit</a> | <a href="/admin/notices/<%= notice.id %>/destroy_notice" style="color:#FF3860;"><i class="far fa-trash-alt"></i> Delete</a></td>
+                <td><%= event.date %></td>
+                <td><a style="color:#333;" href="/notices/<%= event.id %>"><%= event.title %></a></td>
+                <td> <a style="color:#209CEE;" href="/admin/events/<%= event.id %>/edit"><i class="far fa-edit"></i> Edit</a> | <a href="/admin/notices/<%= event.id %>/destroy" style="color:#FF3860;"><i class="far fa-trash-alt"></i> Delete</a></td>
               </tr>
           <% end %>
           </tbody>
         </table>
+
+
       </div>
     </div>
   </div>

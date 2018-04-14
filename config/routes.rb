@@ -5,8 +5,12 @@ Rails.application.routes.draw do
   root 'home#home'
 
   get '/admin', to: 'admin#admin'
-  get '/admin/events', to: 'admin#events'
   get '/admin/notices', to: 'admin#notices'
+  get '/admin/notices/:id/edit_notice', to: 'admin#edit_notice'
+  get '/admin/notices/:id/destroy_notice', to: 'admin#destroy_notice'
+  get '/admin/events', to: 'admin#events'
+  get '/admin/events/:id/edit_event', to: 'admin#edit_event'
+  get '/admin/events/:id/destroy_event', to: 'admin#destroy_event'
 
   get '/faculty', to: 'faculty#faculty'
   get '/faculty/d_adane', to: 'faculty#d_adane'
