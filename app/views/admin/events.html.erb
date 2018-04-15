@@ -68,12 +68,6 @@
     $(document).ready(function() {
         $('input#event_name').characterCounter();
 
-        if ($.trim($("#event_name, #event_desc, #calender").val()) === "") {
-            $('form').submit(function(e) {
-                e.preventDefault();
-                alert('Input fields cannot be left blank.');
-            })
-        }
     });
 </script>
 </body>

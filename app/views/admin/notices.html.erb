@@ -67,12 +67,6 @@
     $(document).ready(function() {
         $('input#notice_name').characterCounter();
 
-        if ($.trim($("#notice_name, #notice_desc, #calender").val()) === "") {
-            $('form').submit(function(e) {
-                e.preventDefault();
-                alert('Input fields cannot be left blank.');
-            })
-        }
     });
 </script>
 </body>
