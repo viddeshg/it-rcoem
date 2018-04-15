@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :notices
   root 'home#home'
 
+  get '/demo', to: 'admin#demo'
+
   get '/admin', to: 'admin#admin'
   get '/admin/notices', to: 'admin#notices'
   get '/admin/notices/:id/edit_notice', to: 'admin#edit_notice'

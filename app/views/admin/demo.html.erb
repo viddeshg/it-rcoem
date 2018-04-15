@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>demo</title>
+  <%= render 'layouts/links' %>
+  <%= render 'layouts/styles' %>
+</head>
+<body>
+<%= render 'layouts/navbar' %>
+<main>
+  <div class="container">
+    <div id="reader" style="width:300px;height:250px"></div>
+    <br>
+    <span id="read" class="center"></span>
+
+  </div>
+</main>
+<%= render 'layouts/footer' %>
+<%= render 'layouts/scripts' %>
+<script src="js/html5-qrcode.min.js"></script>
+<script src="js/jsqrcode-combined.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('#reader').html5_qrcode(function(data){
+                $('#read').html(data);
+            },
+            function(error){
+                $('#read_error').html(error);
+            }, function(videoError){
+                $('#vid_error').html(videoError);
+            }
+        );
+    });
+</script>
+</body>
+</html>

@@ -42,4 +42,8 @@ class AdminController < ApplicationController
     redirect_to '/admin/events'
   end
 
+  def demo
+
+  end
+
 end
