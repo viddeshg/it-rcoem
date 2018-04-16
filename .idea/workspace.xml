@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82c077b1-550f-4d5a-bfa7-6cf78e4d333a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/attendance_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/attendance.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/attendance/new.html.erb" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/admin/demo.html.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/attendance/new.html.erb" afterPath="$PROJECT_DIR$/app/views/attendance/new.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -46,8 +42,8 @@
       <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/attendance/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="182" lean-forward="false" selection-start-line="18" selection-start-column="182" selection-end-line="18" selection-end-column="182" />
+            <state relative-caret-position="264">
+              <caret line="18" column="181" lean-forward="false" selection-start-line="18" selection-start-column="181" selection-end-line="18" selection-end-column="181" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -635,12 +631,12 @@
       <workItem from="1522510803416" duration="526000" />
       <workItem from="1522511792336" duration="54000" />
       <workItem from="1522512981967" duration="35685000" />
-      <workItem from="1523548049277" duration="27183000" />
+      <workItem from="1523548049277" duration="27694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64050000" />
+    <option name="totallyTimeSpent" value="64561000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -1085,8 +1081,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/attendance/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="182" lean-forward="false" selection-start-line="18" selection-start-column="182" selection-end-line="18" selection-end-column="182" />
+        <state relative-caret-position="264">
+          <caret line="18" column="181" lean-forward="false" selection-start-line="18" selection-start-column="181" selection-end-line="18" selection-end-column="181" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#0;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
