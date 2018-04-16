@@ -28,4 +28,6 @@ Rails.application.routes.draw do
   get '/faculty/k_jain', to: 'faculty#k_jain'
   get '/faculty/r_joshi', to: 'faculty#r_joshi'
 
+  get '/attendance/upload', to: 'attendance#new'
+
 end
